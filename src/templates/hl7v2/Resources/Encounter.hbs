@@ -12,22 +12,7 @@
         {{else}}
             "status":"unknown",
         {{/if}}
-        "location":
-        [
-            {
-                {{#if (ne PV1-2-1 "P")}},
-                    "status":"active",
-                {{/if}},
-                {{#if (eq PV1-2-1 "P")}},
-                    "status":"planned",
-                {{/if}},
-            },
-            {
-                {{#if PV1-6}},
-                    "status":"completed",
-                {{/if}},
-            },
-        ],
+        
         "type":
         [
             { {{>DataType/CWECodeableConcept.hbs mapping="CodeSystem/AdmissionType.hbs" CWE=PV1-4}} },

@@ -91,15 +91,20 @@
             { {{>DataType/EIIdentifier.hbs EI=OBR-3}} },
             { {{>DataType/EIIdentifier.hbs EI=OBR-53}} },
         ],
-        "status":{{>DataType/_code.hbs mapping="CodeSystem/OrderStatus.hbs" inCode=ORC-5 }},
-        {{#if ORC-1}},
-            "authoredOn":"{{formatAsDateTime ORC-9}}",
-        {{/if}},
+        "status": "completed",
+        "authoredOn":"{{formatAsDateTime OBR-22}}",
         "occurrenceDateTime":"{{formatAsDateTime ORC-15}}",
         "occurrenceDateTime":"{{formatAsDateTime OBR-6}}",
         "locationCode":
-        [
-            { {{>DataType/CWECodeableConcept.hbs mapping="CodeSystem/OrderType.hbs" CWE=ORC-29}} },
+        [ 
+            {
+              "coding":
+                {
+                "code" : "HOSP",
+                "display" : "Hospital",
+                "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                },
+            }
         ],
         "quantityQuantity":
         {

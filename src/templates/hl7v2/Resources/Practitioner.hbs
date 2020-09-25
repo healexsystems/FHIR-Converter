@@ -3,6 +3,12 @@
     "resource":{
         "resourceType": "Practitioner",
         "id":"{{ID}}",
+        "name":
+        [
+            {
+                {{>DataType/XPN.hbs XPN=ORC-10}}
+            }
+        ],
         "address":
         [
             { {{>DataType/XAD.hbs XAD=ROL-11}} },

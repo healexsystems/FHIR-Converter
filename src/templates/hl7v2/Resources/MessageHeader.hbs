@@ -5,28 +5,27 @@
         "id":"{{ID}}",
         "source":
         {
-            {{>DataType/HDMSH_3.hbs HD=MSH-3}},
-            "endpoint":"{{MSH-24}}",
+            "endpoint":"{{MSH-2}}",
             "version":"{{SFT-2}}",
             "software":"{{SFT-3}}",
         },
         "destination":
         [
             {
-                {{>DataType/HDMSH_5.hbs HD=MSH-5}},
+                "endpoint": "{{MSH-5}}",
             },
         ],
-        "meta":
-        {
-            "security":
-            [
-            ],
-            "tag":
-            [
-                { {{>DataType/PT.hbs PT=MSH-11}} },
-            ],
-        },
         "language":{{>DataType/_code.hbs mapping="CodeSystem/Language.hbs" inCode=MSH-19 }},
+        "eventCoding": { 
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "{{MSH-8-2}}"
+            
+        },
+        "response": 
+        {
+            "identifier":"{{MSH-9}}",
+            "code": "ok"
+        },
     },
     "request":{
         "method":"POST",
