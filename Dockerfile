@@ -15,5 +15,13 @@ COPY . .
 
 RUN ["chmod", "+x", "/usr/src/app/deploy/webapp.sh"]
 
+RUN chmod +x /usr/src/app/templates/ -R
+
 EXPOSE 2019
-CMD [ "npm", "start" ]
+
+#npm start is executed in /usr/src/app/templates/api-call.sh
+#CMD [ "npm", "start" ]
+
+
+
+
